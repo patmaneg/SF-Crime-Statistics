@@ -12,4 +12,4 @@ Next we have to run our kafka-server:
 And then, we have to check if the server is producing data and we are able to consume it by kafka consumer:
   kafka-console-consumer --bootstrap-server localhost:9092 --topic police-department-calls --from-beginning
 
-![alt text] ()https://github.com/patmaneg/SF-Crime-Statistics.git/images/kafka-consumer.JPG?raw=true)
+![alt text] (https://github.com/patmaneg/SF-Crime-Statistics.git/images/kafka-consumer.JPG?raw=true)
