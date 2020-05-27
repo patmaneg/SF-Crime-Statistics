@@ -42,7 +42,7 @@ We can check if the topic has been created too (police-department-calls):
 
 
 ### STEP 2: Exploring Information in DataSets
-Once we have explore the information with a Jupyter notebook (incluidede in this Git) we can implement data-stream and see the progress reporter by executing the code:
+Once we have explore the information with a Jupyter notebook, we can implement data-stream and see the progress reporter by executing the code:
 
   'spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
  
