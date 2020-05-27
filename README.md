@@ -91,7 +91,3 @@ And it looks like these are the optimal values:
   ![Kafka consumer output](https://github.com/patmaneg/SF-Crime-Statistics/blob/master/images/question2.JPG?raw=true)
 
   
-In addition we could try to change these variables too:
-
-  > parallelism
-  > partitions
