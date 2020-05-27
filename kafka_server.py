@@ -10,7 +10,7 @@ def run_kafka_server():
         input_file=input_file,
         topic="police-department-calls",
         bootstrap_servers="localhost:9092",
-        client_id="police-department"
+        client_id="1"
     )
 
     return producer
