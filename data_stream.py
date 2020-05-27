@@ -33,8 +33,8 @@ def run_spark_job(spark):
         .option("kafka.bootstrap.servers", "localhost:9092") \
         .option("subscribe", "police-department-calls") \
         .option("startingOffsets","earliest")\
-        .option("maxRatePerPartition",1000)\
-        .option("maxOffsetsPerTrigger",2000)\
+        .option("maxRatePerPartition",50000)\
+        .option("maxOffsetsPerTrigger",100000)\
         .option("stopGracefullyOnShutdown", "true") \
         .load()
 
@@ -106,7 +106,8 @@ if __name__ == "__main__":
     # TODO Create Spark in Standalone mode
     spark = SparkSession \
         .builder \
-        .master("local[*]") \
+        .master("local[16]") \
+        .config('spark.driver.memory', '3g') \
         .appName("KafkaSparkStructuredStreaming") \
         .config("spark.ui.port",3000) \
         .getOrCreate()
