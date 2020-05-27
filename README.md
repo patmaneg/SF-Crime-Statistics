@@ -50,7 +50,7 @@ Once we have explore the information with a Jupyter notebook (incluidede in this
   
 And the output:
 
-
+  ![Kafka consumer output](https://github.com/patmaneg/SF-Crime-Statistics/blob/master/images/output.JPG?raw=true)
 
 
 
