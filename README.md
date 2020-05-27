@@ -47,6 +47,10 @@ Once we have explore the information with a Jupyter notebook (incluidede in this
   'spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
  
   ![Kafka consumer output](https://github.com/patmaneg/SF-Crime-Statistics/blob/master/images/ProgressReport.JPG?raw=true)
+  
+And the output:
+
+
 
 
 
