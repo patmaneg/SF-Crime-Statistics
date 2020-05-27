@@ -16,7 +16,7 @@ I had created my project in the workspace, but these are the requirements to dev
 This is the steps made to obtain the desire results:
 --------------------------------------------------------------------------------------------------
 
-## STEP 1: Creating a kafka server with police department calls information
+### STEP 1: Creating a kafka server with police department calls information
 First we have to start zookeeper and kafka:
 
   `/usr/bin/zookeeper-server-start /etc/kafka/zookeeper.properties`
@@ -41,7 +41,7 @@ We can check if the topic has been created too (police-department-calls):
 ![Kafka consumer output](https://github.com/patmaneg/SF-Crime-Statistics/blob/master/images/kafka-consumer.JPG?raw=true)
 
 
-## STEP 2: Exploring Information in DataSets
+### STEP 2: Exploring Information in DataSets
 Once we have explore the information with a Jupyter notebook (incluidede in this Git) we can implement data-stream and see the progress reporter by executing the code:
 
   'spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
@@ -57,4 +57,17 @@ And the output:
   ![Kafka consumer output](https://github.com/patmaneg/SF-Crime-Statistics/blob/master/images/output.JPG?raw=true)
 
 
+### STEP 3: Answer to the questions
+
+**1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?**
+
+We can increase/decrease this two varibles: 
+  > maxOffsetPerTrigger 
+  > maxRatePerPartition
+in the creation of the Spark Configuration (data_stream.py), and we can look at it in the ReportProgress: processedRowPerSecond
+
+
+
+
+**2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?**
 
