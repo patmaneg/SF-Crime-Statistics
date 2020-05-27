@@ -62,12 +62,36 @@ And the output:
 **1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?**
 
 We can increase/decrease this two varibles: 
-  > maxOffsetPerTrigger 
-  > maxRatePerPartition
-in the creation of the Spark Configuration (data_stream.py), and we can look at it in the ReportProgress: processedRowPerSecond
 
+  > maxOffsetPerTrigger 
+  
+  > maxRatePerPartition
+  
+in the creation of the Spark Configuration (data_stream.py), and we can look at it in the ReportProgress: `processedRowPerSecond
+
+  ![Kafka consumer output](https://github.com/patmaneg/SF-Crime-Statistics/blob/master/images/question1.JPG?raw=true)
 
 
 
 **2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?**
 
+In relation with question 1, I have been testing variations in these four variables to have the best performance by watching the best value for `processedRowPerSecond.
+
+
+  > maxOffsetPerTrigger 
+  
+  > maxRatePerPartition
+  
+  > local[n]
+  
+  > spark.driver.memory
+  
+And it looks like these are the optimal values:
+
+  ![Kafka consumer output](https://github.com/patmaneg/SF-Crime-Statistics/blob/master/images/question2.JPG?raw=true)
+
+  
+In addition we could try to change these variables too:
+
+  > parallelism
+  > partitions
