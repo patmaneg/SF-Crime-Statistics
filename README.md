@@ -4,7 +4,7 @@ SF Crime Statistics with Spark Streaming (Udacity course)
 In this project, we have been provided with a real-world dataset, extracted from Kaggle, on San Francisco crime incidents, and we will provide statistical analyses of the data using Apache Spark Structured Streaming. We will draw on the skills and knowledge you've learned in Udacity Streaming course to create a Kafka server to produce data, and ingest data through Spark Structured Streaming.
 
 # Development Environment
-I had created my project in the workspace, but these are the requirements to develop the project locally:
+I have created my project in the Udacity workspace, but these are the requirements to develop the project locally:
 
     •	Spark 2.4.3
     •	Scala 2.11.x
@@ -12,7 +12,7 @@ I had created my project in the workspace, but these are the requirements to dev
     •	Kafka build with Scala 2.11.x
     •	Python 3.6.x or 3.7.x
 
---------------------------------------------------------------------------------------------------
+**--------------------------------------------------------------------------------------------------**
 This is the steps made to obtain the desire results:
 --------------------------------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ And the output:
   ![Kafka consumer output](https://github.com/patmaneg/SF-Crime-Statistics/blob/master/images/output.JPG?raw=true)
 
 
-### STEP 3: Answer to the questions
+### STEP 3: Answer the questions
 
 **1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?**
 
